@@ -23,7 +23,7 @@
   },
   "type": "static",
   "static":{
-    "dir": "html"
+    "dir": "dist"
   },
   "tags": {
     "Owner": "eSolia",
