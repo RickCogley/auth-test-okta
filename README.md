@@ -2,6 +2,6 @@
 
 Testing Okta authentication, per [this guide](https://developer.okta.com/blog/2018/06/08/add-authentication-to-any-web-page-in-10-minutes).
 
-See [demo site](https://ypcgfuqgnb.execute-api.ap-northeast-1.amazonaws.com/production/).
+See [demo site](https://oktatest.esolia.jp/).
 
 This site is built by hand, and published to AWS via [Apex.sh](https://apex.sh) «[up](https://apex.sh/up/)». 
