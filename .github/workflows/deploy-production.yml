@@ -9,6 +9,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - name: Copy and Prep
+      run: |
+          cp -avfr html dist
+          find . -type f -name 'dist/*.html' -print0 | xargs -0 sed -i . 's|{STAGE}|'$UP_STAGE'|g'
     - name: Deploy via Apex Up
       env:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
