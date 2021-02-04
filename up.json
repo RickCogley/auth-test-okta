@@ -1,0 +1,39 @@
+{
+  "name": "auth-test-1",
+  "hooks": {
+    "clean": [
+      "up prune -s production -r 10"
+    ]
+  },
+  "stages": {
+    "production": {
+      "lambda": {
+        "warm": true,
+        "endpoint": "regional",
+        "memory": 1024,
+        "accelerate": true
+      }
+    }
+  },
+  "type": "static",
+  "static":{
+    "dir": "html"
+  },
+  "tags": {
+    "Owner": "eSolia",
+    "AppName": "AuthTest1",
+    "PoweredBy": "ApexUp"
+  },
+  "profile": "apex-up-esolia",
+  "regions": [
+    "ap-northeast-1"
+  ],
+  "error_pages": {
+    "enable": true,
+    "variables": {
+      "support_email": "rick.cogley@esolia.co.jp",
+      "color": "#228ae6"
+    }
+  }
+}
+
