@@ -24,8 +24,10 @@ jobs:
       uses: apex/actions/up@v0.5.1
       with:
         stage: production
-    - name: Check folder contents
+    - name: Check folder contents and clean up
       run: |
           ls
           echo "====== HTML ======"
           ls html
+          ls dist
+          rm -fr dist
