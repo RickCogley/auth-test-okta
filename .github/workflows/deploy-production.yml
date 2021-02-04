@@ -12,7 +12,10 @@ jobs:
     - name: Copy and Prep
       run: |
           cp -avfr html dist
-          find dist -type f -name "*.html" -print0 | xargs -0 sed "s|{STAGE}|'production'|g"
+          sed -i . "s|{STAGE}|'production'|g" dist/index.html
+          sed -i . "s|{STAGE}|'production'|g" dist/open/index.html
+          sed -i . "s|{STAGE}|'production'|g" dist/private/index.html
+          sed -i . "s|{STAGE}|'production'|g" dist/private/sub/index.html
     - name: Deploy via Apex Up
       env:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
