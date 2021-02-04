@@ -4,7 +4,7 @@
     "build": [
       "cp -avfr html dist",
       "sed -i . 's|{STAGE}|'$UP_STAGE'|g' dist/index.html",
-      "find . -type f -name 'dist/*.html' -print0 | xargs -0 sed -i . 's|{STAGE}|'$UP_STAGE'|g'"
+      "find . -type f -name 'dist/*.html' -print0 | xargs -0 sed -i '' 's|{STAGE}|'$UP_STAGE'|g'"
     ],
     "clean": [
       "up prune -s production -r 10",
